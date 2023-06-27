@@ -1,0 +1,28 @@
+/* Define a fonte padrão para todos os elementos e define a caixa de conteúdo como "border-box" para facilitar o cálculo do tamanho total do elemento */
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Define a cor de fundo do corpo do documento */
+body {
+    background-color: #f6f8fc;
+}
+
+/* Define as propriedades do elemento com a classe "content", que será o contêiner principal do conteúdo */
+.content {
+    width: 100vw; /* Define a largura do elemento como 100% da largura da janela de visualização */
+    height: 100vh; /* Define a altura do elemento como 100% da altura da janela de visualização */
+    padding: 1rem; /* Define o preenchimento interno do elemento como 1 unidade de medida */
+    background-color: #fff; /* Define a cor de fundo do elemento como branco */
+}
+
+/* Define as propriedades do elemento com a classe "content" quando a largura da janela de visualização for maior ou igual a 992px */
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px; /* Define a largura máxima do elemento como 992px */
+        height: auto; /* Define a altura do elemento como automática para acomodar o conteúdo */
+        margin: 1rem auto; /* Define as margens superior e inferior como 1 unidade de medida e as margens esquerda e direita como automáticas para centralizar o elemento horizontalmente */
+        border-radius: 1rem; /* Define o raio da borda do elemento como 1 unidade de medida para arredondar as bordas */
+    }
+}

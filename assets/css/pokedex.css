@@ -1,0 +1,179 @@
+/* Define a classe .pokemons como um grid com uma coluna, sem margem, sem padding e sem estilo de lista */
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Define a cor de fundo para as classes dos pokemons */
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+/* Define a classe .pokemon como um flex container com direção de coluna, margem de 0.5rem, padding de 1rem e borda arredondada de 1rem */
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Define o estilo para o número do pokemon, com cor preta, opacidade de 0.3, alinhamento à direita e tamanho de fonte de 0.625rem */
+.pokemon .number {
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-size: .625rem;
+}
+
+/* Define o estilo para o nome do pokemon, com texto em caixa alta, cor branca e margem inferior de 0.25rem */
+.pokemon .name {
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: .25rem;
+}
+
+/* Define o estilo para o detalhe do pokemon, com display flex, direção de linha, alinhamento vertical centralizado e espaço entre os elementos */
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Define o estilo para a lista de tipos do pokemon, sem margem, sem padding e sem estilo de lista */
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Define o estilo para cada tipo do pokemon, com cor branca, padding de 0.25rem e 0.5rem, margem de 0.25rem, tamanho de fonte de 0.625rem, borda arredondada de 1rem, brilho de 1.1 e alinhamento centralizado */
+.pokemon .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+/* Define o estilo para a imagem do pokemon, com largura máxima de 100% e altura de 70px */
+.pokemon .detail img {
+    max-width: 100%;
+    height: 70px;
+}
+
+/* Define a classe .pagination como um flex container com direção de linha, alinhamento centralizado e largura de 100% */
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Define o estilo para os botões de paginação, com padding de 0.25rem e 0.5rem, margem de 0.25rem, tamanho de fonte de 0.625rem, cor branca, cor de fundo de #6c79db, sem borda e borda arredondada de 1rem */
+.pagination button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+}
+
+/* Define as regras de mídia para telas com largura mínima de 380px, com 2 colunas */
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Define as regras de mídia para telas com largura mínima de 576px, com 3 colunas */
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Define as regras de mídia para telas com largura mínima de 992px, com 4 colunas */
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
